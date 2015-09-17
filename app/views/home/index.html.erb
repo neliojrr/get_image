@@ -1,0 +1,87 @@
+<h1>Image generator</h1>
+<div class="forms">
+  <p>
+    Pick a background image
+  </p>
+  <p id="image_pick">
+    <% @files.each do |img| %>
+      <%= image_tag "http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/#{img}",
+       size: "75x75", class: "background_images" %>
+    <% end %>
+  </p>
+  <p>
+    Write your text
+  </p>
+  <p>
+    <textarea id="message"></textarea>
+  </p>
+  <p>
+    Insert the author
+  </p>
+  <p>
+    <input type="text" id="author" />
+  </p>
+  <p>
+    Colors
+  </p>
+  <p>
+    <ul id="colors" class="colors">
+      <li style="background-color: #000000;"></li>
+      <li style="background-color: #111111;"></li>
+      <li style="background-color: #222222;"></li>
+      <li style="background-color: #333333;"></li>
+      <li style="background-color: #444444;"></li>
+      <li style="background-color: #555555;"></li>
+      <li style="background-color: #666666;"></li>
+      <li style="background-color: #777777;"></li>
+      <li style="background-color: #888888;"></li>
+      <li style="background-color: #999999;"></li>
+      <li style="background-color: #aaaaaa;"></li>
+      <li style="background-color: #bbbbbb;"></li>
+      <li style="background-color: #cccccc;"></li>
+      <li style="background-color: #dddddd;"></li>
+      <li style="background-color: #eeeeee;"></li>
+      <li style="background-color: #ffffff;"></li>
+    </ul>
+  </p>
+  <p>
+    Shadows
+  </p>
+  <p>
+    <ul id="shadows" class="colors">
+      <li style="background-color: #000000;"></li>
+      <li style="background-color: #111111;"></li>
+      <li style="background-color: #222222;"></li>
+      <li style="background-color: #333333;"></li>
+      <li style="background-color: #444444;"></li>
+      <li style="background-color: #555555;"></li>
+      <li style="background-color: #666666;"></li>
+      <li style="background-color: #777777;"></li>
+      <li style="background-color: #888888;"></li>
+      <li style="background-color: #999999;"></li>
+      <li style="background-color: #aaaaaa;"></li>
+      <li style="background-color: #bbbbbb;"></li>
+      <li style="background-color: #cccccc;"></li>
+      <li style="background-color: #dddddd;"></li>
+      <li style="background-color: #eeeeee;"></li>
+      <li style="background-color: #ffffff;"></li>
+    </ul>
+  </p>
+  <p>
+    <%= form_tag({controller: "home", action: "generator"}, method: "post", id: "form_generator") do %>
+      <input type="hidden" name="html_to_generate" id="html_to_generate" value="">
+      <input type="submit" value="Gerar" />
+    <% end %>
+  </p>
+</div>
+<div class="preview">
+  <p>
+    Preview
+  </p>
+  <div id="instagram_picture">
+    <p id="book_message">
+    </p>
+    <p id="book_author">
+    </p>
+  </div>
+</div>

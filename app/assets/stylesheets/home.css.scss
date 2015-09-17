@@ -1,0 +1,57 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 60px;
+}
+div {
+  float: left;
+  width: 45%;
+
+  #image_pick img {
+    border: 2px solid white;
+  }
+
+  .colors {
+    list-style-type: none;
+    margin-left: 0px;
+
+    li {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-left: 0px;
+      border: 1px solid black;
+    }
+  }
+}
+div + div {
+  float: right;
+  width: 50%;
+
+  div {
+    height: 600px;
+    width: 600px;
+    text-align: center;
+
+    #book_message {
+      margin-top: 50px;
+      font-size: 42px;
+      color: black;
+      line-height: 75px;
+      padding: 40px;
+    }
+
+    #book_author {
+      font-size: 32px;
+      color: black;
+      line-height: 75px;
+    }
+
+
+  }
+}
